@@ -1,31 +1,20 @@
 import { Module } from '@nestjs/common';
 import { PrismaService } from './infra/database/prisma.service';
 
-//controllers
-import { GetMembersController } from './controllers/get-members/get-members.controller';
-import { PostMembersController } from './controllers/post-members/post-members.controller';
-import { PutMembersController } from './controllers/put-members/put-members.controller';
-import { DeleteMembersController } from './controllers/delete-members/delete-members.controller';
-//services
-import { GetService } from './controllers/get-members/get-members.service';
-import { PostMembersService } from './controllers/post-members/post-members.service';
-import { PutMembersService } from './controllers/put-members/put-members.service';
-import { DeleteMembersService } from './controllers/delete-members/delete-members.service';
+import { UsersModule } from './controllers/users/users.module';
+import { AdminModule } from './controllers/admin/admin.module';
+import { AuthModule } from './auth/auth.module';
+
+import { UsersController } from './controllers/users/users.controller';
+import { AdminController } from './controllers/admin/admin.controller';
+
+import { UsersService } from './controllers/users/users.service';
+import { AdminService } from './controllers/admin/admin.service';
+import { AuthService } from './auth/auth.service';
 
 @Module({
-  imports: [],
-  controllers: [
-    GetMembersController,
-    PostMembersController,
-    PutMembersController,
-    DeleteMembersController,
-  ],
-  providers: [
-    GetService,
-    PostMembersService,
-    PutMembersService,
-    DeleteMembersService,
-    PrismaService,
-  ],
+  imports: [UsersModule, AdminModule, AuthModule],
+  controllers: [UsersController, AdminController],
+  providers: [PrismaService, UsersService, AdminService, AuthService],
 })
 export class AppModule {}
