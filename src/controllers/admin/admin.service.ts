@@ -1,29 +1,38 @@
 import { Injectable } from '@nestjs/common';
+import { PrismaClient } from '@prisma/client';
 import { CreateAdminDto } from './dto/create-admin.dto';
 
 @Injectable()
 export class AdminService {
-  create(createAdminDto: CreateAdminDto) {
-    return 'This action adds a new admin';
+  constructor(private readonly prismaClient: PrismaClient) {}
+
+  async create(Admin: CreateAdminDto) {
+    try {
+    } catch (error) {}
   }
 
-  findAll() {
-    return `This action returns all admin`;
+  async findAll() {
+    try {
+    } catch (error) {}
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} admin`;
+  async findOne(id: string) {
+    try {
+    } catch (error) {}
   }
 
-  findAdmin(username: string, password: string) {
-    return `This action returns a #${username} user with password ${password}`;
+  /*async findAdmin(username: string, password: string) {
+    try {
+    } catch (error) {}
+  }*/
+
+  async update(id: string) {
+    try {
+    } catch (error) {}
   }
 
-  update(id: number) {
-    return `This action updates a #${id} admin`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} admin`;
+  async remove(id: number) {
+    try {
+    } catch (error) {}
   }
 }

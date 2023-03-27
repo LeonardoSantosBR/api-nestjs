@@ -3,27 +3,32 @@ import { CreateUserDto } from './dto/create-user.dto';
 
 @Injectable()
 export class UsersService {
-  create(createUserDto: CreateUserDto) {
-    return 'This action adds a new user';
+  async create(User: CreateUserDto) {
+    try {
+    } catch (error) {}
   }
 
-  findAll() {
-    return `This action returns all users`;
+  async findAll() {
+    try {
+    } catch (error) {}
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} user`;
+  async findOne(id: string) {
+    try {
+    } catch (error) {}
   }
 
-  findUser(username: string, password: string) {
+  /*findUser(username: string, password: string) {
     return `This action returns a #${username} user with password ${password}`;
+  }*/
+
+  async update(id: string) {
+    try {
+    } catch (error) {}
   }
 
-  update(id: number) {
-    return `This action updates a #${id} user`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} user`;
+  async remove(id: string) {
+    try {
+    } catch (error) {}
   }
 }
