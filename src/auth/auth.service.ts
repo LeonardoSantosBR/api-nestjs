@@ -10,13 +10,13 @@ export class AuthService {
     private adminService: AdminService,
   ) {}
 
-  async findUser(username, password) {
-    const user = await this.usersService.findUser(username, password);
+  async findUser(id: string) {
+    const user = await this.usersService.findOne(id);
     return user;
   }
 
-  async findAdmin(username, password) {
-    const admin = await this.adminService.findAdmin(username, password);
+  async findAdmin(id: string) {
+    const admin = await this.adminService.findOne(id);
     return admin;
   }
 }

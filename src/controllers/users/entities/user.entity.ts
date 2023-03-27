@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { randomUUID } from 'crypto';
 export class User {
   public id: string;

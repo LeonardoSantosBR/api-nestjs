@@ -1,11 +1,10 @@
-/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
-import { PrismaClient } from '@prisma/client';
+import { PrismaService } from 'src/infra/database/prisma.service';
 import { CreateAdminDto } from './dto/create-admin.dto';
 
 @Injectable()
 export class AdminService {
-  constructor(private readonly prismaClient: PrismaClient) {}
+  constructor(private readonly prismaClient: PrismaService) {}
 
   async create(Admin: CreateAdminDto) {
     try {
@@ -19,6 +18,7 @@ export class AdminService {
 
   async findOne(id: string) {
     try {
+      return id;
     } catch (error) {}
   }
 
