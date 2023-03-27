@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { PrismaClient } from '@prisma/client';
 import { CreateAdminDto } from './dto/create-admin.dto';
@@ -31,7 +32,7 @@ export class AdminService {
     } catch (error) {}
   }
 
-  async remove(id: number) {
+  async remove(id: string) {
     try {
     } catch (error) {}
   }

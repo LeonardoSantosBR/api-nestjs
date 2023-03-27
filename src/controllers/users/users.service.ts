@@ -1,4 +1,6 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
+import { PrismaClient } from '@prisma/client';
 import { CreateUserDto } from './dto/create-user.dto';
 
 @Injectable()
